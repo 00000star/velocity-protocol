@@ -24,8 +24,7 @@ baseRotateSpeed: 5.0
 flying: false
 canBoost: false
 
-# AI controller — logistics behavior
-defaultCommand: mineCommand
+# AI: Mindustry auto-assigns logistics behavior based on itemCapacity
 
 # No weapons — pure logistics unit
 weapons: []
@@ -35,4 +34,4 @@ accel: 0.12
 drag: 0.04
 
 # Research tree placement
-research: ground-factory
+research: velocity-protocol-velocity-ground-factory

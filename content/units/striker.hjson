@@ -61,49 +61,23 @@ weapons: [
       despawnEffect: hitBulletSmall
     }
   }
+]
 
-  # ═══════════════════════════════════════════
-  # AFTERBURNER: Hidden weapon — applies speed boost
-  # Fires a 0-damage projectile at enemies that applies
-  # the "afterburner" status effect TO THE STRIKER ITSELF.
-  # ═══════════════════════════════════════════
+# ═══════════════════════════════════════════
+# AFTERBURNER: StatusFieldAbility
+# Continuously applies a 67% speed boost to the Striker itself.
+# Range 1 ensures only this unit is affected.
+# ═══════════════════════════════════════════
+abilities: [
   {
-    name: striker-afterburner
-    x: 0
-    y: 0
-    shootY: 0
+    type: StatusFieldAbility
+    effect: velocity-protocol-afterburner
+    duration: 120
     reload: 60
-    mirror: false
-    rotate: false
-    showStatSprite: false
-    display: false
-    shootSound: none
-    shootCone: 360
-
-    bullet: {
-      type: BasicBulletType
-      speed: 0
-      damage: 0
-      width: 0
-      height: 0
-      lifetime: 1
-      hittable: false
-      reflectable: false
-      absorbable: false
-      collides: false
-      collidesAir: false
-      collidesGround: false
-      despawnEffect: none
-      hitEffect: none
-      shootEffect: none
-      smokeEffect: none
-
-      # Apply Afterburner speed boost to self
-      status: velocity-protocol-afterburner
-      statusDuration: 90
-    }
+    range: 1
   }
 ]
 
 # Research tree placement
-research: ground-factory
+research: velocity-protocol-velocity-ground-factory
+

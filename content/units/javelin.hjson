@@ -60,15 +60,9 @@ weapons: [
       smokeEffect: shootBigSmoke
       pierceCap: 4
       hitColor: "ff6060ff"
-
-      # Trail visual — long energy lance
-      trailLength: 30
-      trailWidth: 2.5
-      trailColor: "ff4040ff"
-      trailEffect: none
     }
   }
 ]
 
 # Research tree placement
-research: air-factory
+research: velocity-protocol-velocity-air-factory

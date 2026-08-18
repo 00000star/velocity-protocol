@@ -33,4 +33,4 @@ lowAltitude: false
 weapons: []
 
 # Research tree placement
-research: air-factory
+research: velocity-protocol-velocity-air-factory
