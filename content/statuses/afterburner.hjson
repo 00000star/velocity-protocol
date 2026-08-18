@@ -1,8 +1,6 @@
-# Afterburner Status Effect
-# Applied to the Striker via StatusFieldAbility.
-# Grants a 67% speed increase for aggressive engagements.
-
+type: StatusEffect
+name: afterburner
 speedMultiplier: 1.67
 damageMultiplier: 1.0
 damage: 0
-color: ff8c00
+color: "ff8c00"
