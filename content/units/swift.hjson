@@ -1,0 +1,36 @@
+# Swift — Air Logistics / Transport Unit
+# Role: High-speed air transport. Can pick up and carry size-1 units (like Runner).
+# No weapons. Built for speed and payload delivery.
+
+type: flying
+name: Swift
+
+description: "A fast sci-fi transport aircraft with swept-forward wings and cargo clamps. Capable of picking up and relocating ground units for rapid tactical redeployment."
+
+health: 350
+armor: 2
+speed: 4.5
+hitSize: 18
+rotateSpeed: 6
+itemCapacity: 80
+
+# Payload — can carry size-1 units (Runner is ~8 hitSize, well within capacity)
+payloadCapacity: 8
+
+# Flying characteristics — fast, agile
+flying: true
+accel: 0.08
+drag: 0.03
+
+# Engine visuals — dual jet engines
+engineOffset: 9
+engineSize: 3.5
+
+# Low altitude flight
+lowAltitude: false
+
+# No weapons — pure transport
+weapons: []
+
+# Research tree placement
+research: air-factory

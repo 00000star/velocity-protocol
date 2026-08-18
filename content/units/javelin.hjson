@@ -1,0 +1,74 @@
+# Javelin — Hover Artillery Unit
+# Role: Long-range piercing artillery. Fragile, fast, devastating.
+# The massive rail-lance has extreme recoil that physically pushes
+# the unit backward on every shot, forcing positional micro-management.
+
+type: flying
+name: Javelin
+
+description: "A fragile, high-tech hovercraft dominated by a single massive railgun barrel. The immense recoil force pushes the entire unit backward with each shot, demanding careful positioning. One hit, then reposition."
+
+health: 220
+armor: 0
+speed: 3.0
+hitSize: 12
+rotateSpeed: 4
+itemCapacity: 0
+
+# Hover behavior — flies but stays low, moves like ground
+flying: true
+lowAltitude: true
+
+# Engine visuals — anti-gravity pods
+engineOffset: 7
+engineSize: 2.5
+
+# Acceleration — nimble for repositioning after recoil
+accel: 0.1
+drag: 0.04
+
+weapons: [
+  # ═══════════════════════════════════════════
+  # RAIL-LANCE: Massive piercing railgun
+  # Damage 85 (piercing), Reload 90 ticks (1.5s), Range ~42 blocks
+  # Extreme recoil pushes the fragile unit backward.
+  # ═══════════════════════════════════════════
+  {
+    name: javelin-rail-lance
+    x: 0
+    y: 2
+    shootY: 8
+    reload: 90
+    recoil: 12
+    mirror: false
+    rotate: false
+    shootSound: railgun
+    shootCone: 5
+    cooldownTime: 60
+    shootEffect: shootBig
+    ejectEffect: none
+
+    bullet: {
+      type: RailBulletType
+      damage: 85
+      length: 336
+      # Range = 336 world units ≈ 42 blocks
+      pierce: true
+      pierceBuilding: true
+      hitEffect: hitBulletBig
+      shootEffect: shootBig
+      smokeEffect: shootBigSmoke
+      pierceCap: 4
+      hitColor: "ff6060ff"
+
+      # Trail visual — long energy lance
+      trailLength: 30
+      trailWidth: 2.5
+      trailColor: "ff4040ff"
+      trailEffect: none
+    }
+  }
+]
+
+# Research tree placement
+research: air-factory

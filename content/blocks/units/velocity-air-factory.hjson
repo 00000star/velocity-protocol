@@ -1,0 +1,51 @@
+# Velocity Air Factory
+# Produces: Swift (transport) and Javelin (artillery)
+# A specialized aerospace assembly platform for airborne units.
+
+type: UnitFactory
+name: velocity-air-factory
+
+description: "A specialized aerospace assembly platform. Produces the Swift transport aircraft and the Javelin hover artillery at rapid deployment speeds."
+
+size: 3
+health: 350
+
+# Build cost to place the factory
+requirements: [
+  copper/100
+  lead/100
+  silicon/80
+  titanium/40
+]
+
+# Power consumption while producing
+consumes: {
+  power: 1.5
+}
+
+# Units this factory can produce
+plans: [
+  {
+    # Swift — Fast air transport
+    unit: velocity-protocol-swift
+    time: 720
+    requirements: [
+      silicon/20
+      metaglass/15
+      titanium/10
+    ]
+  }
+  {
+    # Javelin — Hover artillery
+    unit: velocity-protocol-javelin
+    time: 1080
+    requirements: [
+      silicon/30
+      titanium/25
+      metaglass/20
+      graphite/15
+    ]
+  }
+]
+
+category: units

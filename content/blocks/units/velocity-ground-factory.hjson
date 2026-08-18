@@ -1,0 +1,48 @@
+# Velocity Ground Factory
+# Produces: Runner (logistics) and Striker (assault)
+# A high-throughput assembly plant optimized for rapid unit deployment.
+
+type: UnitFactory
+name: velocity-ground-factory
+
+description: "A high-speed ground unit assembly plant. Produces the Runner logistics drone and the Striker assault mech at accelerated rates."
+
+size: 3
+health: 350
+
+# Build cost to place the factory
+requirements: [
+  copper/120
+  lead/80
+  silicon/60
+]
+
+# Power consumption while producing
+consumes: {
+  power: 1.2
+}
+
+# Units this factory can produce
+plans: [
+  {
+    # Runner — Fast logistics drone
+    unit: velocity-protocol-runner
+    time: 480
+    requirements: [
+      silicon/10
+      copper/15
+    ]
+  }
+  {
+    # Striker — Fast assault mech
+    unit: velocity-protocol-striker
+    time: 900
+    requirements: [
+      silicon/25
+      titanium/20
+      metaglass/15
+    ]
+  }
+]
+
+category: units

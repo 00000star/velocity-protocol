@@ -1,0 +1,109 @@
+# Striker — Fast Ground Assault Mech
+# Role: Hit-and-run combat. Twin autocannons + Afterburner speed boost.
+# The Afterburner engages automatically when enemies are within range,
+# boosting speed by 67% for aggressive pursuit or rapid disengagement.
+
+type: mech
+name: Striker
+
+description: "A highly mobile combat mech with twin rapid-fire autocannons and an afterburner system. When enemies are detected nearby, the afterburner engages automatically, boosting speed by 67%. Built for devastating hit-and-run tactics."
+
+health: 400
+armor: 2
+speed: 2.4
+hitSize: 10
+rotateSpeed: 6
+itemCapacity: 0
+
+# Mech tuning — aggressive combat stance
+mechStepParticles: true
+mechFrontSway: 0.5
+mechSideSway: 0.6
+baseRotateSpeed: 4.0
+
+# Ground only
+flying: false
+canBoost: false
+
+# Acceleration — responsive for combat maneuvers
+accel: 0.1
+drag: 0.04
+
+weapons: [
+  # ═══════════════════════════════════════════
+  # PRIMARY: Twin Autocannons (mirrored)
+  # Damage 18, Reload 12 ticks, Range ~24 blocks
+  # ═══════════════════════════════════════════
+  {
+    name: striker-autocannon
+    x: 5
+    y: 1
+    shootY: 3
+    reload: 12
+    recoil: 1.5
+    rotate: false
+    mirror: true
+    alternate: true
+    ejectEffect: casing1
+    shootSound: shoot
+
+    bullet: {
+      type: BasicBulletType
+      speed: 6
+      damage: 18
+      width: 7
+      height: 9
+      lifetime: 32
+      # Range ≈ speed(6) × lifetime(32) = 192 world units ≈ 24 blocks
+      shootEffect: shootSmall
+      smokeEffect: shootSmallSmoke
+      hitEffect: hitBulletSmall
+      despawnEffect: hitBulletSmall
+    }
+  }
+
+  # ═══════════════════════════════════════════
+  # AFTERBURNER: Hidden weapon — applies speed boost
+  # Fires a 0-damage projectile at enemies that applies
+  # the "afterburner" status effect TO THE STRIKER ITSELF.
+  # ═══════════════════════════════════════════
+  {
+    name: striker-afterburner
+    x: 0
+    y: 0
+    shootY: 0
+    reload: 60
+    mirror: false
+    rotate: false
+    showStatSprite: false
+    display: false
+    shootSound: none
+    shootCone: 360
+
+    bullet: {
+      type: BasicBulletType
+      speed: 0
+      damage: 0
+      width: 0
+      height: 0
+      lifetime: 1
+      hittable: false
+      reflectable: false
+      absorbable: false
+      collides: false
+      collidesAir: false
+      collidesGround: false
+      despawnEffect: none
+      hitEffect: none
+      shootEffect: none
+      smokeEffect: none
+
+      # Apply Afterburner speed boost to self
+      status: velocity-protocol-afterburner
+      statusDuration: 90
+    }
+  }
+]
+
+# Research tree placement
+research: ground-factory

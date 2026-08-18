@@ -1,0 +1,38 @@
+# Runner — Ground Logistics Unit
+# Role: Extremely fast resource hauling.
+# No weapons. Pure speed. Pure logistics.
+
+type: mech
+name: Runner
+
+description: "A tiny, ultra-fast logistics drone on continuous treads. Designed for one thing: moving resources faster than anything else on the battlefield."
+
+health: 180
+armor: 1
+speed: 3.2
+hitSize: 8
+rotateSpeed: 8
+itemCapacity: 30
+
+# Mech movement tuning — fast and responsive
+mechStepParticles: true
+mechFrontSway: 0.3
+mechSideSway: 0.3
+baseRotateSpeed: 5.0
+
+# Flight / boost disabled — ground only
+flying: false
+canBoost: false
+
+# AI controller — logistics behavior
+defaultCommand: mineCommand
+
+# No weapons — pure logistics unit
+weapons: []
+
+# Lightweight, fast-accelerating
+accel: 0.12
+drag: 0.04
+
+# Research tree placement
+research: ground-factory
