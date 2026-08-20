@@ -27,7 +27,7 @@ consumes: {
 plans: [
   {
     # Swift — Fast air transport
-    unit: velocity-protocol-swift
+    unit: velocity-protocol-reborn-swift
     time: 720
     requirements: [
       silicon/20
@@ -37,7 +37,7 @@ plans: [
   }
   {
     # Javelin — Hover artillery
-    unit: velocity-protocol-javelin
+    unit: velocity-protocol-reborn-javelin
     time: 1080
     requirements: [
       silicon/30

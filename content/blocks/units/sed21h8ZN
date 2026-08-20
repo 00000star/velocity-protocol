@@ -35,7 +35,7 @@ plans: [
   }
   {
     # Striker — Fast assault mech
-    unit: velocity-protocol-reborn-striker
+    unit: velocity-protocol-striker
     time: 900
     requirements: [
       silicon/25

@@ -1,8 +1,8 @@
 # Velocity Protocol - A Mindustry v146+ Content Mod
 # Theme: "Speed is the weapon."
 
-name: velocity-protocol
-displayName: "Velocity Protocol"
+name: "velocity-protocol-reborn"
+displayName: "Velocity Protocol (Reborn)"
 description: "A faction dedicated to extreme mobility, rapid logistics, and hit-and-run tactics. Speed is the weapon."
 author: "Velocity Labs"
 minGameVersion: 146
