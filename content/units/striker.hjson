@@ -71,7 +71,13 @@ weapons: [
 abilities: [
   {
     type: StatusFieldAbility
-    effect: velocity-protocol-afterburner
+    effect: {
+      name: afterburner
+      speedMultiplier: 1.67
+      damageMultiplier: 1.0
+      damage: 0
+      color: "ff8c00"
+    }
     duration: 120
     reload: 60
     range: 1
