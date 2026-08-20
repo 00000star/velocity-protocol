@@ -1,6 +1,0 @@
-type: StatusEffect
-name: afterburner
-speedMultiplier: 1.67
-damageMultiplier: 1.0
-damage: 0
-color: "ff8c00"
